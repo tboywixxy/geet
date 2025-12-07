@@ -53,6 +53,7 @@ export type AlbumNode = {
   title: string;
   description?: string;
   cover: GalleryItem;
+  type?: "image" | "video";
 
   // If this is a "real" album
   images?: GalleryItem[];
