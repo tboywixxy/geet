@@ -175,10 +175,7 @@ function StorySection() {
             through giving.
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-100/85">
-            Your support funds scholarships, welfare interventions, teacher
-            appreciation and campus projects that carry our Class of &apos;85
-            legacy forward. Every gift – small or large – makes a real
-            difference to someone&apos;s story.
+           The Eighty5ers operate as a non-profit Incorporated Trusteeship — dedicated to supporting education, welfare, and community development. Your donations fuel programmes that strengthen FGCS, uplift communities, and support our members.
           </p>
 
           {/* Typewriter line */}

@@ -3,6 +3,9 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 
+// 🔹 Adjust this path if needed
+import { LAGOS_HUB_4Q2023_GATHERING_IMAGES } from "../gallery/albums/lagosHub4Q2023";
+
 type HeroSlide = {
   image: string;
   eyebrow: string;
@@ -10,95 +13,109 @@ type HeroSlide = {
   description: React.ReactNode;
 };
 
-const heroSlides: HeroSlide[] = [
+/**
+ * We “split” your homepage hero copy into 3 variations,
+ * so as the image changes, the text also changes.
+ */
+const heroMeta: Omit<HeroSlide, "image">[] = [
   {
-    image:
-      "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=1600&q=80",
-    eyebrow: "Reunion · One Love · Legacy",
-    title: (
-      <>
-        Reuniting the{" "}
-        <span className="text-[var(--brand-gold)]">Class of ’85</span> to give
-        back and stay connected.
-      </>
-    ),
+    eyebrow: "Association of Eighty5ers FGCS",
+    title: <>One Love — United by Memory, Driven by Purpose.</>,
     description: (
       <>
-        From{" "}
-        <span className="text-[var(--brand-yellow)]">
-          shared classrooms
-        </span>{" "}
-        to global careers, we&apos;re turning our journeys into{" "}
-        <span className="text-[var(--brand-gold)]">
-          scholarships, welfare and projects
-        </span>{" "}
-        that keep Federal Government College memories alive.
+        <span className="block">
+          Welcome to the official online home of the Association of Eighty5ers FGCS — Class of 1985, Federal Government College Sokoto.
+        </span>
+        <span className="block mt-1">
+          Here, memory meets purpose. Here, friendship becomes service. Here, our journey continues — stronger, wiser, and more united than ever.
+        </span>
       </>
     ),
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1600&q=80",
-    eyebrow: "Programs & Impact",
+    eyebrow: "Our Journey Since 1985",
     title: (
       <>
-        Turning <span className="text-[var(--brand-gold)]">nostalgia</span>{" "}
-        into <span className="text-[var(--brand-yellow)]">impact</span> at home.
+        From shared classrooms to{" "}
+        <span className="text-[var(--brand-gold)]">shared impact</span>.
       </>
     ),
     description: (
       <>
-        Through <span className="text-[var(--brand-gold)]">education</span>,
-        <span className="text-[var(--brand-blue)]"> welfare</span>, and{" "}
-        <span className="text-[var(--brand-red)]">community projects</span>, the
-        Eighty5ers are giving the next generation more than just memories –{" "}
-        we&apos;re building opportunities.
+        <span className="block">
+          For over 40 years, we have remained a family bound by shared experiences, enduring bonds, and an unwavering spirit of “One Love.”
+        </span>
+        <span className="block mt-1">
+          Across cities, careers and continents, we are still showing up for one another and for today&apos;s FGCS students.
+        </span>
       </>
     ),
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1600&q=80",
-    eyebrow: "Membership · Giving · Community",
+    eyebrow: "Legacy · Service · Community",
     title: (
       <>
-        One <span className="text-[var(--brand-gold)]">community</span>, many{" "}
-        <span className="text-[var(--brand-yellow)]">stories</span>, one{" "}
-        <span className="text-[var(--brand-blue)]">Future FGCS</span>.
+        Preserving our{" "}
+        <span className="text-[var(--brand-gold)]">past</span>, strengthening
+        our <span className="text-[var(--brand-yellow)]">future</span>.
       </>
     ),
     description: (
       <>
-        Whether you&apos;re in{" "}
-        <span className="text-[var(--brand-gold)]">Lagos</span>,
-        <span className="text-[var(--brand-blue)]"> London</span> or{" "}
-        <span className="text-[var(--brand-red)]">Los Angeles</span>, your
-        membership and support keep the{" "}
-        <span className="text-[var(--brand-yellow)]">“One Love”</span> spirit
-        alive for today&apos;s students.
+        <span className="block">
+          This platform preserves our past, celebrates our present, and strengthens our collective future as Eighty5ers.
+        </span>
+        <span className="block mt-1">
+          Through membership, giving and service, we are turning memory into structured support, welfare and legacy projects for FGCS.
+        </span>
       </>
     ),
   },
 ];
 
+// Build slides from Lagos Hub images + the meta above
+const heroSlides: HeroSlide[] = (LAGOS_HUB_4Q2023_GATHERING_IMAGES || [])
+  .slice(6, 22) // adjust slice if you want different images
+  .map((img, idx) => {
+    const meta = heroMeta[idx % heroMeta.length];
+    return {
+      image: img.src,
+      eyebrow: meta.eyebrow,
+      title: meta.title,
+      description: meta.description,
+    };
+  });
+
 export default function Hero() {
   const [heroIndex, setHeroIndex] = useState(0);
 
   const goToNext = useCallback(() => {
-    setHeroIndex((prev) => (prev + 1) % heroSlides.length);
+    setHeroIndex((prev) =>
+      heroSlides.length > 0 ? (prev + 1) % heroSlides.length : prev
+    );
   }, []);
 
   const goToPrev = useCallback(() => {
     setHeroIndex((prev) =>
-      prev === 0 ? heroSlides.length - 1 : prev - 1
+      heroSlides.length === 0
+        ? prev
+        : prev === 0
+        ? heroSlides.length - 1
+        : prev - 1
     );
   }, []);
 
   // Auto-rotate every 5s
   useEffect(() => {
+    if (heroSlides.length === 0) return;
     const id = setInterval(goToNext, 5000);
     return () => clearInterval(id);
   }, [goToNext]);
+
+  if (heroSlides.length === 0) {
+    // Safety fallback so the page doesn't break if array is empty
+    return null;
+  }
 
   const currentSlide = heroSlides[heroIndex];
 
@@ -118,7 +135,7 @@ export default function Hero() {
               alt="Association reunion hero"
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/45 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-transparent" />
           </div>
         ))}
 
@@ -138,26 +155,32 @@ export default function Hero() {
             </p>
 
             <div className="mt-2 flex flex-col gap-3 sm:mt-3 sm:flex-col">
-              {/* CTAs */}
+              {/* CTAs – homepage buttons */}
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="#membership"
                   className="inline-flex items-center justify-center rounded-full bg-[var(--brand-gold)] px-4 py-2 text-xs font-semibold text-[var(--brand-deep-green)] shadow-sm shadow-black/40 hover:bg-[var(--brand-gold-soft)]"
                 >
-                  Become a Member
+                  Join the Association
                 </Link>
                 <Link
                   href="#donate"
                   className="inline-flex items-center justify-center rounded-full border border-emerald-100/40 bg-black/25 px-4 py-2 text-xs font-semibold text-slate-50 backdrop-blur-sm hover:bg-black/40"
                 >
-                  Support a Project
+                  Donate Now
+                </Link>
+                <Link
+                  href="/events"
+                  className="inline-flex items-center justify-center rounded-full border border-emerald-100/40 bg-black/10 px-4 py-2 text-xs font-semibold text-slate-50 backdrop-blur-sm hover:bg-black/30"
+                >
+                  View Upcoming Events
                 </Link>
               </div>
 
               {/* Arrows / slide controls */}
               <div className="flex items-center gap-3 pt-1">
                 <span className="text-[11px] uppercase tracking-[0.22em] text-slate-100/70">
-                  Featured stories
+                  Featured highlights
                 </span>
                 <div className="flex gap-2">
                   <button

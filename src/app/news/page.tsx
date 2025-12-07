@@ -32,13 +32,12 @@ export default function NewsPage() {
               📰 News &amp; Updates
             </p>
             <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
-              Stay informed with{" "}
-              <span className="text-[var(--brand-gold)]">One Love stories</span>{" "}
-              and updates.
+              Stay connected to the{" "}
+              <span className="text-[var(--brand-gold)]">heartbeat of the Eighty5ers</span>.
             </h1>
             <p className="text-xs sm:text-sm leading-relaxed text-slate-100/85">
-              All the latest from the Association of Eighty5ers FGCS — spotlights,
-              reports, school news and alumni perspectives.
+              Alumni spotlights, project reports, school news and editorials —
+              capturing the ongoing story of the Association of Eighty5ers FGCS.
             </p>
           </div>
         </div>
@@ -57,9 +56,8 @@ export default function NewsPage() {
               ⭐ Alumni Spotlight
             </p>
             <p className="mt-2 text-[13px] sm:text-sm leading-relaxed text-foreground/80">
-              Celebrating Eighty5ers making a difference in their professions,
-              communities and across the world. From boardrooms to classrooms,
-              from public service to entrepreneurship.
+              Celebrating classmates making waves across industries and continents — 
+              from the public sector to private enterprise, from local impact to global influence.
             </p>
           </div>
 
@@ -69,9 +67,8 @@ export default function NewsPage() {
               📊 Project Reports
             </p>
             <p className="mt-2 text-[13px] sm:text-sm leading-relaxed text-foreground/80">
-              Transparent updates on our programmes, including scholarships,
-              legacy projects, welfare interventions and community outreach —
-              with outcomes, photos and impact stories.
+              Transparent updates on ongoing initiatives and completed projects, including key milestones,
+              financial stewardship and the lives being touched through our collective effort.
             </p>
           </div>
 
@@ -81,21 +78,19 @@ export default function NewsPage() {
               🏫 School News
             </p>
             <p className="mt-2 text-[13px] sm:text-sm leading-relaxed text-foreground/80">
-              Updates from Federal Government College Sokoto: academic
-              milestones, infrastructure developments, student achievements and
-              important announcements that matter to the Eighty5ers.
+              Updates from FGCS Sokoto — events, achievements, infrastructure developments and school
+              news that matter to the Eighty5ers and the wider alumni community.
             </p>
           </div>
 
-          {/* Editorials */}
+          {/* Editorials & Stories */}
           <div className="rounded-2xl border border-border/70 bg-background/90 p-4 sm:p-5">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/65">
-              ✍️ Editorials
+              ✍️ Editorials &amp; Stories
             </p>
             <p className="mt-2 text-[13px] sm:text-sm leading-relaxed text-foreground/80">
-              Insight pieces from alumni professionals — reflections on
-              leadership, education, public service, nation-building and the
-              FGCS legacy.
+              Insights, reflections and thought pieces from our global community — on leadership,
+              faith, family, nation-building and the enduring “One Love” spirit of the Eighty5ers.
             </p>
           </div>
         </div>
@@ -107,12 +102,11 @@ export default function NewsPage() {
           Contribute a story
         </p>
         <p className="text-sm leading-relaxed text-foreground/85">
-          Contributions and stories are welcome — alumni achievements, project
-          experiences, tributes to teachers, and reflections on “One Love”
-          across the years.
+          Alumni achievements, project experiences, tributes to teachers, reflections on FGCS days and
+          “One Love” moments across the years are all welcome.
         </p>
         <p className="text-[13px] text-foreground/80">
-          Send your articles, features or photo essays to{" "}
+          <span className="font-semibold">Contribute your story:</span>{" "}
           <a
             href="mailto:info@eighty5ers.org"
             className="font-semibold text-[var(--brand-gold)] underline-offset-2 hover:underline"

@@ -29,15 +29,15 @@ export default function ContactPage() {
               📞 Contact • ⚖️ Governance
             </p>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight">
-              Secretariat,{" "}
+              Secretariat &nbsp;{" "}
               <span className="text-[var(--brand-gold)]">
-                governance & transparency
-              </span>{" "}
-              in one place.
+                governance &amp; transparency
+              </span>
+              .
             </h1>
             <p className="text-sm sm:text-base leading-relaxed text-slate-100/85">
-              Reach the Association of Eighty5ers FGCS and explore how we are
-              structured, governed and held accountable.
+              Stay connected to the Association of Eighty5ers FGCS and explore
+              how we are structured, governed and held accountable.
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function ContactPage() {
       {/* SECRETARIAT DETAILS */}
       <section className="rounded-3xl border border-border bg-surface/80 p-7 sm:p-9 space-y-6">
         <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.26em] text-foreground/60">
-          The Secretariat
+          The Secretariat Office
         </p>
 
         <div className="grid gap-8 sm:grid-cols-2">
@@ -57,7 +57,7 @@ export default function ContactPage() {
                 Physical address
               </p>
               <p className="mt-1">
-                House 3, 63 Road, A-Close, Gwarimpa, Abuja FCT, Nigeria.
+                House 3, 63 Road, A-Close, Gwarimpa, Abuja FCT
               </p>
             </div>
 
@@ -65,9 +65,7 @@ export default function ContactPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/55">
                 Office hours
               </p>
-              <p className="mt-1">
-                Monday – Friday, 9:00 AM – 4:00 PM (West Africa Time).
-              </p>
+              <p className="mt-1">Monday – Friday, 9:00 AM – 4:00 PM.</p>
             </div>
           </div>
 
@@ -89,7 +87,7 @@ export default function ContactPage() {
 
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-foreground/55">
-                WhatsApp / Mobile
+                Mobile
               </p>
               <p className="mt-1">+234-123-456-7890</p>
             </div>
@@ -99,7 +97,7 @@ export default function ContactPage() {
                 Social media
               </p>
               <p className="mt-1 text-[14px] sm:text-[15px] text-foreground/80">
-                Facebook | LinkedIn | Instagram | YouTube
+                Facebook | Instagram | LinkedIn | YouTube
               </p>
             </div>
           </div>
@@ -113,75 +111,85 @@ export default function ContactPage() {
             Governance &amp; transparency
           </p>
           <p className="text-[15px] sm:text-base leading-relaxed text-foreground/85">
-            The Association of Eighty5ers FGCS operates under a well-defined
-            constitution and the governance framework of the Incorporated
-            Trusteeship model. Officers, Trustees and committees are guided by
-            principles of service, probity and accountability.
+            The Association operates with the discipline and clarity of a
+            serious alumni institution.
           </p>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 text-[14px] sm:text-[15px] text-foreground/85">
-          <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
-              📘 Annual Reports
-            </p>
-            <p>
-              Yearly summaries of activities, impact, programmes and outlook for
-              the Association.
-            </p>
-          </div>
+        {/* Transparency Centre */}
+        <div className="space-y-3">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.24em] text-foreground/60">
+            Transparency Centre
+          </p>
 
-          <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
-              💰 Financial Summaries
-            </p>
-            <p>
-              Income, expenditure and project spending snapshots, aligned with
-              regulatory requirements.
-            </p>
-          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 text-[14px] sm:text-[15px] text-foreground/85">
+            <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
+                📘 Annual Reports
+              </p>
+              <p>Yearly summaries of activities, impact and outlook.</p>
+            </div>
 
-          <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
-              📝 AGM Minutes &amp; Resolutions
-            </p>
-            <p>
-              Records of decisions and resolutions from Annual General Meetings
-              of the Association.
-            </p>
-          </div>
+            <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
+                💰 Financial Summaries
+              </p>
+              <p>
+                High-level income and expenditure updates for members and
+                partners.
+              </p>
+            </div>
 
-          <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
-              📄 Association Constitution
-            </p>
-            <p>
-              The guiding document for membership, governance, elections and
-              operations.
-            </p>
-            <p className="text-[12px] text-[var(--brand-gold)]">
-              (Downloadable PDF – coming soon)
-            </p>
-          </div>
+            <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
+                📝 AGM Minutes &amp; Resolutions
+              </p>
+              <p>
+                Key decisions and resolutions from Annual General Meetings.
+              </p>
+            </div>
 
-          <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
-            <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
-              🔐 Privacy &amp; Data Protection Policy
-            </p>
-            <p>
-              How we collect, store and protect member information in line with
-              best practices and regulations.
-            </p>
+            <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
+                📂 Governance Documents
+              </p>
+              <p>
+                Frameworks, policies and guidelines that shape how the
+                Association is run.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
+                📄 Association Constitution
+              </p>
+              <p>The foundational document of rights, roles and processes.</p>
+              <p className="text-[12px] text-[var(--brand-gold)]">
+                (Download PDF – coming soon)
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-border/70 bg-background/90 p-5 space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.20em] text-foreground/65">
+                🔐 Privacy &amp; Data Protection Policy
+              </p>
+              <p>
+                How we safeguard member information and comply with data
+                protection standards.
+              </p>
+            </div>
           </div>
         </div>
 
-        <p className="text-[13px] sm:text-[14px] text-foreground/75">
-          <span className="font-semibold text-[var(--brand-gold)]">
-            Integrity and accountability
-          </span>{" "}
-          are not just words for Eighty5ers — they are the heart of “One Love”
-          in governance, finance and service.
-        </p>
+        {/* Governance Ethos */}
+        <div className="pt-2 border-t border-border/60 mt-4">
+          <p className="text-[13px] sm:text-[14px] text-foreground/80">
+            <span className="font-semibold text-[var(--brand-gold)]">
+              Integrity. Accountability. Transparency.
+            </span>{" "}
+            Values we lived as students — and uphold as adults.
+          </p>
+        </div>
       </section>
     </main>
   );

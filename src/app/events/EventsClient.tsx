@@ -6,25 +6,25 @@ import React, { useEffect, useState } from "react";
 
 const CALENDAR_SLIDES = [
   {
-    title: "Topical Webinars",
+    title: "Topical Webinars & Conversations",
     description:
-      "Tapping into the wealth of knowledge in our community for the benefit of all.",
+      "Tapping into the wealth of experience within the Eighty5ers family to discuss leadership, careers, family, faith and nation-building.",
     image:
       "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80",
     tag: "Learning & Conversations",
   },
   {
-    title: "Mentorship Seminar",
+    title: "Mentorship & Career Seminars",
     description:
-      "Bridging the gap between past and present FGCS students through structured mentoring sessions.",
+      "Bridging generations as alumni share guidance with younger FGCS students and fellow classmates seeking new paths and opportunities.",
     image:
       "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
     tag: "Guidance & Mentoring",
   },
   {
-    title: "Legacy Project Launch",
+    title: "Legacy Project Launch & Handover",
     description:
-      "Showcasing class-driven development efforts that improve facilities and opportunities at FGCS.",
+      "Commissioning classroom, lab, ICT and facility upgrades that keep FGCS strong — and visibly linking them to the Class of ’85 story.",
     image:
       "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1200&q=80",
     tag: "Building Legacy",
@@ -32,7 +32,7 @@ const CALENDAR_SLIDES = [
   {
     title: "General Meeting & Thanksgiving Service",
     description:
-      "Strengthening our shared faith, unity and accountability as an association.",
+      "Strengthening faith, unity and accountability through prayer, worship, gratitude and formal updates on Association business.",
     image:
       "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
     tag: "Faith & Governance",
@@ -40,7 +40,7 @@ const CALENDAR_SLIDES = [
   {
     title: "Reunion Weekend & Gala Night",
     description:
-      "Reconnect, reminisce and recharge with classmates across cities, countries and continents.",
+      "From hugs and hostel stories to music and laughter, our reunions bring Eighty5ers together across cities, countries and continents.",
     image:
       "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
     tag: "One Love in Full Colour",
@@ -68,25 +68,28 @@ export default function EventsClient() {
 
   // Auto-advance for calendar slider
   useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % CALENDAR_SLIDES.length);
-    }, 5000); // 5s per slide
+    const timer = setInterval(
+      () => setActiveSlide((prev) => (prev + 1) % CALENDAR_SLIDES.length),
+      5000
+    );
     return () => clearInterval(timer);
   }, []);
 
   // Auto-advance for highlight images
   useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveHighlightImage(
-        (prev) => (prev + 1) % HIGHLIGHT_IMAGES.length
-      );
-    }, 4000);
+    const timer = setInterval(
+      () =>
+        setActiveHighlightImage(
+          (prev) => (prev + 1) % HIGHLIGHT_IMAGES.length
+        ),
+      4000
+    );
     return () => clearInterval(timer);
   }, []);
 
   return (
     <>
-      {/* HERO – same style family as Membership / Programs hero */}
+      {/* HERO – same family as Membership / Programs hero */}
       <section className="relative overflow-hidden border-border bg-black text-slate-50">
         {/* Background image */}
         <div className="absolute inset-0">
@@ -106,7 +109,7 @@ export default function EventsClient() {
         <div className="relative flex min-h-[260px] items-center justify-center px-6 py-16 text-center sm:min-h-[320px] lg:min-h-[360px]">
           <div className="max-w-2xl space-y-3">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--brand-gold)]/90">
-              📅 Events
+              📅 Events &amp; Gatherings
             </p>
             <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
               Reunions, worship,{" "}
@@ -116,8 +119,10 @@ export default function EventsClient() {
               all year.
             </h1>
             <p className="text-xs sm:text-sm leading-relaxed text-slate-100/85">
-              Our calendar blends serious conversations, spiritual moments and
-              joyful reunions that keep the Class of &apos;85 connected.
+              Our calendar blends serious conversations, moments of faith,
+              community projects and joyful reunions that keep the{" "}
+              <span className="font-medium">Class of &apos;85</span> connected
+              in spirit and in action.
             </p>
           </div>
         </div>
@@ -131,7 +136,8 @@ export default function EventsClient() {
               Annual calendar highlights
             </p>
             <p className="mt-1 text-xs text-foreground/65">
-              A rhythm of learning, worship, service and celebration.
+              A rhythm of learning, worship, service and celebration for
+              Eighty5ers at home and abroad.
             </p>
           </div>
 
@@ -181,8 +187,8 @@ export default function EventsClient() {
                     </p>
                   </div>
                   <p className="mt-3 text-[11px] text-foreground/60">
-                    Each highlight is an invitation to show up — in person or
-                    online — and keep the One Love story alive.
+                    Each highlight is an invitation to show up — on-site or
+                    online — and keep the “One Love” story alive.
                   </p>
                 </div>
 
@@ -215,13 +221,17 @@ export default function EventsClient() {
           <div className="flex flex-col justify-between space-y-3 text-sm leading-relaxed text-foreground/80">
             <div className="space-y-2">
               <p>
-                Reunion moments, project handovers, community outreach, and
-                school visits are showcased in our photo and video gallery.
+                Reunion weekends, thanksgiving services, project handovers and
+                outreach visits are captured in our{" "}
+                <span className="font-medium">
+                  Gallery / Archives collection
+                </span>
+                .
               </p>
               <p className="text-[12px] text-foreground/70">
-                These stories remind us why we gather: to celebrate progress,
-                honour our teachers, and keep the One Love spirit alive across
-                cities, countries and continents.
+                These stories remind us why we keep gathering: to celebrate
+                progress, honour our teachers, comfort one another and pass the
+                “One Love” spirit to the next generation.
               </p>
             </div>
 
@@ -264,7 +274,7 @@ export default function EventsClient() {
               <p className="font-semibold">Reunion &amp; project stories</p>
               <p className="text-[10px] text-slate-100/80">
                 Visit our Gallery / Archives page to relive key moments from
-                Eighty5ers events.
+                Eighty5ers events across the years.
               </p>
             </div>
 

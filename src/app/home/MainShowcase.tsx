@@ -82,7 +82,6 @@ function HighlightCard({ item }: { item: Highlight }) {
 
 /* ======================================
    PROGRAMS & IMPACT – STORIES OF IMPACT
-   (FIRST SECTION, WITH SCROLL REVEAL)
    ====================================== */
 
 export function ProgramsImpactSection() {
@@ -195,25 +194,28 @@ export function ProgramsImpactSection() {
 
 /* ========================
    MEMBERSHIP SECTION
-   (SECOND SECTION)
    ======================== */
 
 const membershipPillars = [
   {
-    title: "Who can join?",
-    body: "All members of the FGCS Class of ’85, wherever you are in the world.",
+    title: "Reconnect with lifelong friends",
+    body: "Find classmates again, rebuild bonds and relive FGCS memories through reunions, gatherings and everyday check-ins.",
   },
   {
-    title: "How to register",
-    body: "Complete the simple online form with your contact, year set and current details.",
+    title: "Access member welfare and support",
+    body: "Be part of a community that stands by members in times of need through structured welfare and support schemes.",
   },
   {
-    title: "Membership dues",
-    body: "Annual dues and voluntary contributions keep our programmes and welfare fund running.",
+    title: "Participate in reunions & legacy projects",
+    body: "Join reunions, mentorship initiatives and legacy projects that give back to FGCS and the wider community.",
   },
   {
-    title: "Why it matters",
-    body: "Your membership turns shared memories into structured support for students and classmates.",
+    title: "Expand your professional network",
+    body: "Connect with Eighty5ers across sectors and continents, opening doors for collaboration, careers and business.",
+  },
+  {
+    title: "Leave a mark on FGCS and future generations",
+    body: "Support the school through scholarships, school improvement projects and programmes that shape future FGCS students.",
   },
 ];
 
@@ -258,26 +260,26 @@ export function MembershipSection() {
         {/* LEFT – text + accordion */}
         <div className="pb-6">
           <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-foreground/60">
-            Membership · One Love · Community
+            Membership · One Love · Legacy
           </p>
 
           <h2 className="mt-2 text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
-            Join the{" "}
-            <span className="text-[var(--brand-gold)]">
-              Association of Eighty5ers
-            </span>{" "}
-            and stay part of the story.
+            Join the Family –{" "}
+            <span className="text-[var(--brand-gold)]">“One Love, One Legacy.”</span>
           </h2>
 
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-foreground/80">
-            Membership is how we stay in touch, stay accountable and stay
-            organised. It&apos;s more than a WhatsApp group – it&apos;s a
-            structured way to give back, support each other and preserve the
-            legacy of FGCS.
+            Membership is open to all who were admitted into FGC Sokoto between
+            1980–1985 or graduated in 1985. Our doors also extend to friends,
+            supporters, and distinguished alumni committed to our shared purpose.
           </p>
 
-          {/* Accordion instead of 2x2 grid */}
-          <div className="mt-5 space-y-2">
+          <p className="mt-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-foreground/60">
+            Benefits of membership
+          </p>
+
+          {/* Accordion with benefits */}
+          <div className="mt-3 space-y-2">
             {membershipPillars.map((item, index) => {
               const open = openIndex === index;
               return (
@@ -317,27 +319,17 @@ export function MembershipSection() {
             })}
           </div>
 
-          <div className="mt-5 flex flex-wrap gap-3">
-            <Link
-              href="/membership"
-              className="inline-flex items-center justify-center rounded-full bg-[var(--brand-gold)] px-4 py-2 text-xs font-semibold text-[var(--brand-deep-green)] shadow-sm shadow-black/30 hover:bg-[var(--brand-gold-soft)]"
-            >
-              Complete membership form
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-full border border-border px-4 py-2 text-xs font-semibold text-foreground/80 hover:bg-foreground/5"
-            >
-              Speak with the Secretariat
-            </Link>
-          </div>
+          <p className="mt-4 text-[11px] text-foreground/70 italic">
+            Join today — and keep the spirit of “One Love” alive.
+          </p>
+
         </div>
 
         {/* RIGHT – tall image filling the column, flush with bottom */}
         <div className="relative flex items-end justify-end">
           <div className="w-full max-w-sm sm:max-w-md">
             <img
-              src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80"
+              src="https://res.cloudinary.com/df2e1ug1q/image/upload/v1765093894/IMG_1558_yrcvdo.jpg"
               alt="Eighty5ers reunion group photo"
               className="w-full h-[260px] sm:h-[320px] md:h-[380px] lg:h-[430px] border border-border object-cover"
             />

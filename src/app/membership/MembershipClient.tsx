@@ -4,37 +4,38 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const BENEFITS = [
-  "Reconnect and strengthen lifelong bonds.",
-  "Participate in welfare and empowerment initiatives.",
-  "Enjoy professional networking and mentorship.",
-  "Contribute to meaningful school and social projects.",
+  "Reconnect with lifelong friends",
+  "Access member welfare and support",
+  "Participate in reunions, mentorship, and legacy projects",
+  "Expand your professional network",
+  "Leave a mark on FGCS and future generations",
 ];
 
 const MEMBERSHIP_CATEGORIES = [
   {
     title: "Ordinary Members",
     description:
-      "Those who meet the core Eighty5ers criteria. Annual dues, voting rights and full access to Association activities.",
+      "1980–1985 classmates with full voting and participation rights.",
   },
   {
     title: "Associate Members",
     description:
-      "Old students of the College outside the 1980–1985 set who are admitted in recognition of their contributions.",
+      "Alumni outside the set who contribute meaningfully to our mission.",
   },
   {
     title: "Honorary Members",
     description:
-      "Distinguished individuals, alumni or friends of the College invited in recognition of their support and service.",
+      "Individuals honoured for exceptional service or support.",
   },
   {
     title: "Patrons / Matriarchs",
     description:
-      "Respected individuals appointed by the General Meeting to serve as patrons, mentors and advisers.",
+      "Elders and respected supporters who offer direction, blessing and counsel.",
   },
   {
-    title: "Corporate Partners (Top Tier)",
+    title: "Corporate Partners",
     description:
-      "Organisations that support alumni programmes, scholarships and projects through strategic partnerships.",
+      "Organisations that support our programmes, projects and values.",
   },
 ];
 
@@ -74,9 +75,9 @@ export default function MembershipClient() {
   }, [charIndex, activeBenefitIndex]);
 
   return (
-    <main className="mx-auto px-4 space-y-1 ">
+    <main className="mx-auto px-4 space-y-1">
       {/* HERO */}
-      <section className="relative overflow-hidden  border-border bg-black text-slate-50">
+      <section className="relative overflow-hidden border-border bg-black text-slate-50">
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
@@ -98,14 +99,16 @@ export default function MembershipClient() {
               👥 Membership
             </p>
             <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
-              Join the family —{" "}
+              Join the Family –{" "}
               <span className="text-[var(--brand-gold)]">
-                “One Love – One Legacy.”
+                “One Love, One Legacy.”
               </span>
             </h1>
             <p className="text-xs sm:text-sm leading-relaxed text-slate-100/85">
-              Open to all Eighty5ers and friends who share our vision, values
-              and commitment to Federal Government College Sokoto.
+              Membership is open to all who were admitted into FGC Sokoto
+              between 1980–1985 or graduated in 1985. Our doors also extend to
+              friends, supporters and distinguished alumni committed to our
+              shared purpose.
             </p>
           </div>
         </div>
@@ -117,13 +120,11 @@ export default function MembershipClient() {
           Who can join?
         </p>
         <p className="text-sm leading-relaxed text-foreground/80">
-          Membership is open to all persons who accept the Association&apos;s
-          aims and objectives and who are old students of the{" "}
+          Membership is open to all who were admitted into{" "}
           <span className="font-medium">Federal Government College Sokoto</span>{" "}
-          duly admitted during the 1980/1981 academic session and/or sat for the
-          school certificate examination during the 1984/1985 academic session,
-          or are old students of the College who were duly admitted and spent at
-          least one (1) academic session as students between 1980 and 1985.
+          between 1980 and 1985 or graduated in 1985. Our doors also extend to
+          friends, supporters and distinguished alumni who share our vision and
+          are committed to our shared purpose of service, legacy and “One Love.”
         </p>
       </section>
 
@@ -135,7 +136,7 @@ export default function MembershipClient() {
               Membership categories
             </p>
             <p className="mt-1 text-xs text-foreground/65">
-              Arranged as a ladder — from core members to strategic partners.
+              Arranged as a ladder — from core Eighty5ers to strategic partners.
             </p>
           </div>
         </div>
@@ -211,10 +212,11 @@ export default function MembershipClient() {
         </div>
 
         <p className="mt-3 text-[11px] text-foreground/65">
-          As each benefit lights up, remember:{" "}
+          Join today — and keep the spirit of{" "}
           <span className="font-semibold text-[var(--brand-gold)]">
-            “One Love” is a commitment, not just a slogan.
-          </span>
+            “One Love”
+          </span>{" "}
+          alive.
         </p>
       </section>
     </main>

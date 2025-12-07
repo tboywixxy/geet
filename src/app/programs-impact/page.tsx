@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function ProgramsImpactPage() {
   return (
     <main className="mx-auto px-4 space-y-4">
-      {/* HERO – same style as Membership hero */}
-      <section className="relative overflow-hidden  border-border bg-black text-slate-50">
+      {/* HERO – aligned with Membership hero style */}
+      <section className="relative overflow-hidden border-border bg-black text-slate-50">
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
@@ -32,15 +32,16 @@ export default function ProgramsImpactPage() {
               💼 Programs &amp; Impact
             </p>
             <h1 className="text-2xl font-semibold tracking-tight sm:text-3xl lg:text-4xl">
-              Turning{" "}
-              <span className="text-[var(--brand-gold)]">
-                memory into action
-              </span>{" "}
-              for FGCS and beyond.
+              Transforming{" "}
+              <span className="text-[var(--brand-gold)]">“One Love”</span> into
+              lasting impact.
             </h1>
             <p className="text-sm sm:text-[15px] leading-relaxed text-slate-100/85">
-              Our projects reflect our shared passion for education, development
-              and community upliftment.
+              Our initiatives reflect who we are: a class committed to{" "}
+              <span className="font-medium">
+                education, community and compassionate support
+              </span>{" "}
+              — for FGCS and the world beyond its gates.
             </p>
           </div>
         </div>
@@ -59,9 +60,10 @@ export default function ProgramsImpactPage() {
               🎓 FGCS Scholarship &amp; Mentorship Program
             </p>
             <p className="mt-2 text-sm leading-relaxed text-foreground/80">
-              We sponsor brilliant and needy students at and to Federal
-              Government College Sokoto, pairing them with alumni mentors from
-              the Class of 1985 who provide career and personal guidance.
+              Supporting brilliant but financially challenged students at
+              Federal Government College Sokoto, while pairing them with alumni
+              mentors from the Eighty5ers family — shaping both academic
+              success and personal growth.
             </p>
           </div>
 
@@ -71,10 +73,21 @@ export default function ProgramsImpactPage() {
               🏫 Legacy Infrastructure Projects
             </p>
             <p className="mt-2 text-sm leading-relaxed text-foreground/80">
-              From classroom upgrades, science lab, kitchen and dining hall
-              renovations, to ICT initiatives, we invest in tangible
-              improvements that enrich learning conditions for current FGCS
-              students.
+              We invest in long-term improvements that upgrade the physical and
+              learning environment of FGCS.
+            </p>
+            <p className="mt-2 text-[12px] font-semibold text-foreground/70">
+              Focus areas include:
+            </p>
+            <ul className="mt-1 list-disc space-y-1 pl-5 text-[12px] text-foreground/75">
+              <li>Classroom renovation</li>
+              <li>Laboratory modernization</li>
+              <li>ICT upgrades</li>
+              <li>Dining hall &amp; kitchen enhancements</li>
+            </ul>
+            <p className="mt-2 text-[12px] text-foreground/70">
+              Each project strengthens the learning environment for current FGCS
+              students and preserves the legacy we inherited.
             </p>
           </div>
 
@@ -84,20 +97,34 @@ export default function ProgramsImpactPage() {
               💖 Welfare &amp; Support Scheme
             </p>
             <p className="mt-2 text-sm leading-relaxed text-foreground/80">
-              We maintain a welfare fund to support members in times of need —
-              reflecting the “One Love” principle that has bound us since 1985.
+              The heart of our Association. The Welfare &amp; Support Scheme
+              provides rapid assistance in emergencies, health crises,
+              bereavements and other moments of need — ensuring{" "}
+              <span className="font-medium">
+                no Eighty5er ever stands alone.
+              </span>
             </p>
           </div>
 
-          {/* Community Service */}
+          {/* Community Service & Philanthropy */}
           <div className="rounded-2xl border border-border/70 bg-background/85 p-4 sm:p-5">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-foreground/65">
               🌍 Community Service &amp; Philanthropy
             </p>
             <p className="mt-2 text-sm leading-relaxed text-foreground/80">
-              Beyond the school, we organise outreach programs, health awareness
-              campaigns, and charitable interventions within the legacy Sokoto
-              State community (Sokoto, Kebbi, and Zamfara States) and beyond.
+              Our “One Love” culture extends beyond school walls into the wider
+              community, translating compassion into tangible action through:
+            </p>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-[12px] text-foreground/75">
+              <li>Health outreach</li>
+              <li>Educational support</li>
+              <li>Charity events</li>
+              <li>Youth mentorship</li>
+              <li>Social intervention projects</li>
+            </ul>
+            <p className="mt-2 text-[12px] text-foreground/70">
+              Together, we transform compassion into impact — for FGCS, for
+              Sokoto and for the communities we touch around the world.
             </p>
           </div>
         </div>
