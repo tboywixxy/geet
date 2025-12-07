@@ -1,6 +1,6 @@
 // src/app/gallery/albums/reunion2024.ts
 
-import type { GalleryItem, AlbumDoc } from "../albumsData";
+import type { AlbumDoc, GalleryItem } from "../albumsData";
 
 /* -------- 2024 Reunion – Schedule of Activities (docs only) -------- */
 
@@ -68,7 +68,7 @@ export const REUNION_2024_SPEECH_DOCS: AlbumDoc[] = [
   },
 ];
 
-export const REUNION_PIX_2024_IMAGES: AlbumDoc[] = [
+export const REUNION_PIX_2024_IMAGES: GalleryItem[] = [
   {
     type: "image",
     src: "https://res.cloudinary.com/df2e1ug1q/image/upload/v1765092870/IMG_1104_syqid8.jpg",
