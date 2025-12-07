@@ -45,6 +45,7 @@ export type AlbumDoc = {
   src: string;
   description?: string;
   format?: string; // pdf, docx, etc.
+  type?: "image" | "video";
 };
 
 export type AlbumNode = {
