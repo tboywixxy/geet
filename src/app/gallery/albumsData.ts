@@ -18,7 +18,7 @@ import {
   REUNION_2024_GIFT_BAG_IMAGES,
   REUNION_2024_BROCHURE_DOCS,
   REUNION_2024_SPEECH_DOCS,
-  REUNION_PIX_2024_IMAGES
+  REUNION_PIX_2024_IMAGES,
 } from "./albums/reunion2024";
 
 import {
@@ -68,7 +68,7 @@ export type AlbumNode = {
 /* ---------------- Root albums ---------------- */
 
 export const ROOT_ALBUMS: AlbumNode[] = [
-  // 🔹 New: Lagos Hub – 4Q 2023 Gathering (Cloudinary album)
+  // 🔹 Lagos Hub – 4Q 2023 Gathering (Cloudinary album)
   {
     slug: "lagos-hub-4q2023-gathering",
     title: "Lagos Hub – 4Q 2023 Gathering",
@@ -79,25 +79,23 @@ export const ROOT_ALBUMS: AlbumNode[] = [
     docs: LAGOS_HUB_4Q2023_GATHERING_DOCS,
   },
 
-    // 🔹 2024 Reunion – parent album with sub-albums
+  // 🔹 2024 Reunion – parent album with sub-albums
   {
     slug: "2024-reunion",
     title: "2024 Reunion",
     description:
       "Schedule, awards, speeches, gift bags and brochure from the 2024 reunion weekend.",
-    // use one of the real photos as the cover (from gift bag album)
+    // use one of the real photos as the cover (from the big photos album)
     cover: REUNION_PIX_2024_IMAGES[1],
     children: [
-
-    
-        {
-            slug: "2024-reunion",
-            title: "2024 Reunion",
-            description:
-            "photos from the 2024 reunion.",
-                cover: REUNION_PIX_2024_IMAGES[0], // first photo from the 444-pic album
-                images: REUNION_PIX_2024_IMAGES,
-        },
+      {
+        // ✅ changed slug so it doesn’t clash with the parent
+        slug: "reunion-photos-2024",
+        title: "2024 Reunion Photos",
+        description: "Photos from the 2024 reunion weekend.",
+        cover: REUNION_PIX_2024_IMAGES[0], // first photo from the main pix album
+        images: REUNION_PIX_2024_IMAGES,
+      },
       {
         slug: "schedule-of-activities",
         title: "Schedule of Activities",
@@ -147,11 +145,10 @@ export const ROOT_ALBUMS: AlbumNode[] = [
         },
         docs: REUNION_2024_SPEECH_DOCS,
       },
-
     ],
   },
 
-    // 🔹 NEW: 2017 Reunion folder with sub-albums + a root doc
+  // 🔹 2017 Reunion folder with sub-albums + a root doc
   {
     slug: "2017-reunion",
     title: "2017 Reunion",
@@ -159,8 +156,12 @@ export const ROOT_ALBUMS: AlbumNode[] = [
       "Brochure, banners, citations and gift bag contents from the 2017 reunion.",
     cover:
       REUNION_2017_BROCHURE_IMAGES[0] ??
-      REUNION_2017_BANNERS_IMAGES[0] ??
-      CAMPUS_IMAGES[0], // small safety fallback
+      REUNION_2017_BANNERS_IMAGES[0] ?? {
+        // ✅ safe static fallback (no CAMPUS_IMAGES dependency)
+        src: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
+        alt: "Reunion materials on a table",
+        label: "Reunion 2017",
+      },
     docs: REUNION_2017_ROOT_DOCS,
     children: [
       {
@@ -196,7 +197,7 @@ export const ROOT_ALBUMS: AlbumNode[] = [
     ],
   },
 
-    {
+  {
     slug: "principal-and-staff",
     title: "Some Pix of Principal and Staff",
     description: "Portraits and moments with school leadership and staff.",
@@ -204,7 +205,7 @@ export const ROOT_ALBUMS: AlbumNode[] = [
     images: PRINCIPAL_STAFF_IMAGES,
   },
 
-    {
+  {
     slug: "crescendo-ikeja",
     title: "Crescendo, Ikeja",
     description:
@@ -213,7 +214,7 @@ export const ROOT_ALBUMS: AlbumNode[] = [
     images: CRESCENDO_IKEJA_IMAGES,
   },
 
-    // 🔹 Articles (docs-only album)
+  // 🔹 Articles (docs-only album)
   {
     slug: "articles",
     title: "Articles & Reflections",
@@ -224,11 +225,10 @@ export const ROOT_ALBUMS: AlbumNode[] = [
       alt: "Books and study materials",
       label: "Articles & reflections",
     },
-    // no images – this album is docs-only
-    images: EIGHTY5ERS_ARTICLES_IMAGES, // currently []
+    // docs-only album; images can stay as [] if needed
+    images: EIGHTY5ERS_ARTICLES_IMAGES,
     docs: EIGHTY5ERS_ARTICLES_DOCS,
   },
-
 ];
 
 /* ---------------- Helper: resolve path → node ---------------- */
