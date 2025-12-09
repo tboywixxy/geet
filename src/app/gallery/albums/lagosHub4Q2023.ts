@@ -1,7 +1,7 @@
-// src/app/gallery/albums/lagosHub4Q2023.ts
+import type { GalleryItem, AlbumDoc } from "../albumsData";
 
 // Documents (PDF / Word etc.) for this album
-export const LAGOS_HUB_4Q2023_GATHERING_DOCS = [
+export const LAGOS_HUB_4Q2023_GATHERING_DOCS: AlbumDoc[] = [
   {
     title: "Lagos Hub Collections – 11 Nov 2023",
     src: "https://res.cloudinary.com/df2e1ug1q/image/upload/v1765092812/Eighty5ers_-_Lagos_Hub_Collections_11112023_zogbin.pdf",
@@ -10,7 +10,7 @@ export const LAGOS_HUB_4Q2023_GATHERING_DOCS = [
 ];
 
 // Images + videos for the grid / lightbox
-export const LAGOS_HUB_4Q2023_GATHERING_IMAGES = [
+export const LAGOS_HUB_4Q2023_GATHERING_IMAGES: GalleryItem[] = [
   {
     type: "image",
     src: "https://res.cloudinary.com/df2e1ug1q/image/upload/v1765092803/IMG-20231206-WA0008_abqr68.jpg",
