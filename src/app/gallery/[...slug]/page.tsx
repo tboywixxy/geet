@@ -210,7 +210,7 @@ export default function GalleryNodePage() {
             {/* Small helper text above the grid */}
             <div className="flex items-center justify-between px-4 pt-4 pb-2">
               <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-slate-500">
-                Click any photo or video to view
+                Click any photo or video to view.
               </p>
             </div>
 
